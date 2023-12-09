@@ -1,0 +1,20 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="mt-4 mb-4 text-center">Categories</h1>
+  <div class="row">
+    {% for category in categories %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{{ category.strCategoryThumb }}" class="card-img-top" alt="{{ category.strCategory }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ category.strCategory }}</h5>
+            <p class="card-text">{{ category.strCategoryDescription }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
